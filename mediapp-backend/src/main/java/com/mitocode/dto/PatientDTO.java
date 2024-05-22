@@ -1,9 +1,13 @@
 package com.mitocode.dto;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.mitocode.model.Sign;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -34,6 +38,9 @@ public class PatientDTO {
 
     @Email
     private String email;
+
+/*    @JsonManagedReference
+    private List<Sign> signs;*/
 
     /*@Max(value = 11)
     @Min(value = 1)
